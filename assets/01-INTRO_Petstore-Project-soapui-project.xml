@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c778d911-b40d-431b-9d3f-003d762a784c" activeEnvironment="Default" name="Petstore Project" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="0b9917af-0501-40e8-9f0d-baf014e2647a" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://petstore.swagger.io" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache/>
+    <con:endpoints>
+      <con:endpoint>https://petstore.swagger.io</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Pet resources" path="/v2/pet/" id="c3700969-a25b-410b-9107-359a4d728cc7">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="findByStatus" path="findByStatus" id="2ecd1d7b-05b0-4900-9a02-1774ede2827d">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>status</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter>
+            <con:name>test</con:name>
+            <con:style>QUERY</con:style>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="GET" id="4f07602c-9418-4554-a349-9eb30f1b3076" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element>Response</con:element>
+          </con:representation>
+          <con:request name="byStatus1" id="69d9df6f-37f3-40c8-8c8a-ce4ece4244b7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/pet/findByStatus</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="status" value="available" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>status</con:entry>
+            </con:parameterOrder>
+          </con:request>
+          <con:request name="byStatus2" id="acd662a7-f96d-4f72-8e44-59d585007684" mediaType="application/json">
+            <con:settings/>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+            <con:parameterOrder>
+              <con:entry>status</con:entry>
+              <con:entry/>
+            </con:parameterOrder>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="{petId}" path="{petId}" id="3af100dd-c5db-44c7-8b68-1f1db4e94d35">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter>
+            <con:name>petId</con:name>
+            <con:value>petId</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>petId</con:default>
+          </con:parameter>
+        </con:parameters>
+        <con:method name="GET" id="72b7202d-9f6f-4efc-b32e-f8dd0d6ecd30" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ns="https://petstore.swagger.io/v2/pet/9223318163395172212">ns:Response</con:element>
+          </con:representation>
+          <con:request name="byId" id="1537a961-142a-4b61-b076-9eeb0f5899cc" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/pet/9223318163395172212</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="petId" value="9223318163395172212" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>petId</con:entry>
+            </con:parameterOrder>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+    <con:resource name="Store resources" path="/v2/store" id="0476debf-8297-4b1e-9425-8cea4b16d569">
+      <con:settings/>
+      <con:parameters/>
+      <con:resource name="inventory" path="inventory" id="8608b1f5-4370-487f-aa15-31835b596bd9">
+        <con:settings/>
+        <con:parameters/>
+        <con:method name="GET" id="866b9006-269d-45ca-920c-04d81b3934ed" method="GET">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>text/html</con:mediaType>
+            <con:status>404</con:status>
+            <con:params/>
+            <con:element>html</con:element>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:inv="https://petstore.swagger.io/store/inventory">inv:Response</con:element>
+          </con:representation>
+          <con:request name="detail" id="b9b4b7d1-4072-478d-834b-f9ded6249589" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/store/inventory</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+      <con:resource name="order" path="order" id="a3236961-79cc-44f1-a3cb-16ebe7b2abd9">
+        <con:settings/>
+        <con:parameters/>
+        <con:resource name="{orderId}" path="{orderId}" id="0f8dac8d-137a-4632-9022-ec41b96b0eca">
+          <con:settings/>
+          <con:parameters>
+            <con:parameter>
+              <con:name>orderId</con:name>
+              <con:value>orderId</con:value>
+              <con:style>TEMPLATE</con:style>
+              <con:default>orderId</con:default>
+            </con:parameter>
+          </con:parameters>
+          <con:method name="GET" id="0ccd69bf-65dc-46c3-97a0-2644b57f6d7a" method="GET">
+            <con:settings/>
+            <con:parameters/>
+            <con:representation type="FAULT">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>404</con:status>
+              <con:params/>
+              <con:element xmlns:ord="https://petstore.swagger.io/v2/store/order/orderId">ord:Fault</con:element>
+            </con:representation>
+            <con:representation type="RESPONSE">
+              <con:mediaType>application/json</con:mediaType>
+              <con:status>200</con:status>
+              <con:params/>
+              <con:element xmlns:ord="https://petstore.swagger.io/v2/store/order/orderId">ord:Response</con:element>
+            </con:representation>
+            <con:request name="byId" id="8b0ad3ff-b503-41a3-8894-205591f01fe8" mediaType="application/json">
+              <con:settings>
+                <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+              </con:settings>
+              <con:endpoint>https://petstore.swagger.io</con:endpoint>
+              <con:request/>
+              <con:originalUri>https://petstore.swagger.io/v2/store/order/orderId</con:originalUri>
+              <con:credentials>
+                <con:authType>No Authorization</con:authType>
+              </con:credentials>
+              <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+              <con:jmsPropertyConfig/>
+              <con:parameters>
+                <entry key="orderId" value="873535" xmlns="http://eviware.com/soapui/config"/>
+              </con:parameters>
+            </con:request>
+          </con:method>
+        </con:resource>
+        <con:method name="POST" id="554cd605-f28b-4331-bfb0-a2da65414fe4" method="POST">
+          <con:settings/>
+          <con:parameters/>
+          <con:representation type="FAULT">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>400</con:status>
+            <con:params/>
+            <con:element xmlns:ord="https://petstore.swagger.io/v2/store/order">ord:Fault</con:element>
+          </con:representation>
+          <con:representation type="REQUEST">
+            <con:mediaType>application/json</con:mediaType>
+            <con:params/>
+          </con:representation>
+          <con:representation type="RESPONSE">
+            <con:mediaType>application/json</con:mediaType>
+            <con:status>200</con:status>
+            <con:params/>
+            <con:element xmlns:ord="https://petstore.swagger.io/v2/store/order">ord:Response</con:element>
+          </con:representation>
+          <con:request name="createOrder" id="14cc7c1e-23e7-4f2c-8a02-24501fc6127e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request>{
+  "id": 873535,
+  "petId": 9223318163395172212,
+  "quantity": 0,
+  "shipDate": "2020-10-26T17:04:16.046+0000",
+  "status": "placed",
+  "complete": true
+}</con:request>
+            <con:originalUri>https://petstore.swagger.io/v2/store/order</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:request>
+        </con:method>
+      </con:resource>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="9c576278-6641-401a-b755-fa9586fc1c4d" name="First TestSuite">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="c59cbce2-62dc-4a4f-8a94-86644070768a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="GET - byStatus1" id="3ac1d3ec-a086-4bcc-a4eb-de2d1d7ab44d">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/pet/findByStatus" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - byStatus1" id="69d9df6f-37f3-40c8-8c8a-ce4ece4244b7" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/v2/pet/findByStatus</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="status" value="available" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>status</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="GET - inventoryDetail" id="fe287d31-003f-4e12-9713-6315a2c213dd">
+        <con:settings/>
+        <con:config service="https://petstore.swagger.io" resourcePath="/v2/store/inventory" methodName="GET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="GET - inventoryDetail" id="b9b4b7d1-4072-478d-834b-f9ded6249589" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://petstore.swagger.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://petstore.swagger.io/store/inventory</con:originalUri>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
